@@ -1,0 +1,3 @@
+DB 사용 폴더
+
+prisma 연동 -> api ts 파일에서 import

@@ -1,0 +1,3 @@
+common component 폴더
+
+버튼, 리스트 등 공통 컴포넌트
