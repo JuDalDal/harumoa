@@ -10,13 +10,13 @@ export const successResponses = {
     USER_FOUND: (data: Record<string, string | number | null>) => generateResponse(200, "USER_FOUND", data),
     USER_EDITED: (data: Record<string, string | number | null>) => generateResponse(200, "USER_EDITED", data),
     USER_DELETED: () => generateResponse(200, "USER_DELETED"),
-    PLAN_FOUND: (data: Record<string, string | number | null>) => generateResponse(200, "PLAN_FOUND", data),
+    PLAN_FOUND: (data: Record<string, string | number | null>[]) => generateResponse(200, "PLAN_FOUND", data),
     PLAN_EDITED: (data: Record<string, string | number | null>) => generateResponse(200, "PLAN_EDITED", data),
     PLAN_DELETED: () => generateResponse(200, "PLAN_DELETED"),
-    SCHEDULE_FOUND: (data: Record<string, string | number | null>) => generateResponse(200, "USER_FOUND", data),
+    SCHEDULE_FOUND: (data: Record<string, string | number | null>[]) => generateResponse(200, "USER_FOUND", data),
     SCHEDULE_EDITED: (data: Record<string, string | number | null>) => generateResponse(200, "USER_EDITED", data),
     SCHEDULE_DELETED: () => generateResponse(200, "USER_DELETED"),
-    CATEGORY_FOUND: (data: Record<string, string | number | null>) => generateResponse(200, "USER_FOUND", data),
+    CATEGORY_FOUND: (data: Record<string, string | number | null>[]) => generateResponse(200, "USER_FOUND", data),
     CATEGORY_EDITED: (data: Record<string, string | number | null>) => generateResponse(200, "USER_EDITED", data),
     CATEGORY_DELETED: () => generateResponse(200, "USER_DELETED"),
 }
@@ -39,7 +39,7 @@ export const errorResponses = {
 function generateResponse(
     httpStatus: number,
     code: string,
-    data?: Record<string, string | number | null>,
+    data?: Record<string, string | number | null> | Record<string, string | number | null>[],
     cookies?: Record<string, string>
 ): HttpResponse {
     const res = new HttpResponse(
