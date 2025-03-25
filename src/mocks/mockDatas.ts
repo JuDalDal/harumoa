@@ -61,8 +61,23 @@ export const mockUsers = [
       category_id: 1,
       repeat_id: null,
       title: "Project Deadline",
-      start_datetime: "2025-03-05T10:00:00Z",
-      end_datetime: "2025-03-05T12:00:00Z",
+      start_time: "2025-03-05T10:00:00Z",
+      end_time: "2025-03-05T12:00:00Z",
+      all_day: 0,
+      location: "Office",
+      detail: "Complete the final report.",
+      alarm: [30],
+      created_at: "2025-03-01T12:00:00Z",
+      updated_at: "2025-03-02T12:00:00Z"
+    },
+    {
+      schedule_id: 2,
+      user_id: 1,
+      category_id: 2,
+      repeat_id: null,
+      title: "Exercise",
+      start_time: "2025-03-05T10:00:00Z",
+      end_time: "2025-03-05T12:00:00Z",
       all_day: 0,
       location: "Office",
       detail: "Complete the final report.",
@@ -91,7 +106,7 @@ export const mockUsers = [
     {
       alarm_id: 1,
       schedule_id: 1,
-      datetime: "2025-03-05T09:45:00Z",
+      datetime: "2025-03-05T11:30:00Z",
       created_at: "2025-03-01T12:00:00Z"
     }
   ];
