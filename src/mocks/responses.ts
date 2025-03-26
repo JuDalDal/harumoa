@@ -7,6 +7,7 @@ export const successResponses = {
     SCHEDULE_CREATED: (data: Record<string, string | number | null>) => generateResponse(201, "SCHEDULE_CREATED", data),
     CATEGORY_CREATED: (data: Record<string, string | number | null>) => generateResponse(201, "CATEGORY_CREATED", data),
     USER_LOGIN: (cookies: Record<string, string>) => generateResponse(200, "USER_CREATED", undefined, cookies),
+    USER_LOGOUT: () => generateResponse(200, "USER_LOGOUT"),
     USER_FOUND: (data: Record<string, string | number | null>) => generateResponse(200, "USER_FOUND", data),
     USER_EDITED: (data: Record<string, string | number | null>) => generateResponse(200, "USER_EDITED", data),
     USER_DELETED: () => generateResponse(200, "USER_DELETED"),
