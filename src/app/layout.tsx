@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { initMocks } from "@/mocks";
+
+// 개발 모드에서만 msw 실행
+if (process.env.NODE_ENV === 'development') {
+  initMocks();
+}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
