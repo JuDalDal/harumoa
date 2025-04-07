@@ -2,7 +2,7 @@ import { DefaultBodyType, http, HttpResponse } from 'msw'
 import { successResponses, errorResponses } from './responses';
 import { mockUsers, mockPlans, mockCategories, mockSchedules, mockAlarms } from './mockDatas';
 
-const baseUrl = 'https://localhost:3000/api';
+const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 
 // handlers
 export const handlers = [
